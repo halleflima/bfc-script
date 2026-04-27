@@ -1,0 +1,10 @@
+{
+  "iconDefinitions": {
+    "bfc_icon": {
+      "iconPath": "./icon.ico"
+    }
+  },
+  "fileExtensions": {
+    "bfc": "bfc_icon"
+  }
+}

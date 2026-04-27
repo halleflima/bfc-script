@@ -1,0 +1,41 @@
+{
+  "name": "bfc",
+  "displayName": "BFC",
+  "icon": "icon/icon.png",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.116.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "bfc-icons",
+        "label": "BFC Icons",
+        "path": "./icon/bfc-icons.json"
+      }
+    ],
+    "languages": [
+      {
+        "id": "bfc",
+        "aliases": [
+          "BFC Script",
+          "bfc"
+        ],
+        "extensions": [
+          ".bfc"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "bfc",
+        "scopeName": "source.bfc",
+        "path": "./syntaxes/bfc-script.tmLanguage.json"
+      }
+    ]
+  }
+}
