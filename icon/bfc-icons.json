@@ -1,7 +1,7 @@
 {
   "iconDefinitions": {
     "bfc_icon": {
-      "iconPath": "./icon.ico"
+      "iconPath": "./icon.png"
     }
   },
   "fileExtensions": {
