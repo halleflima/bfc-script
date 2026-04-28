@@ -1,7 +1,7 @@
 {
   "name": "bfc-script",
   "publisher": "halleflima",
-  "displayName": "bfc-Script syntax highlight",
+  "displayName": "bfc-script syntax highlight",
   "icon": "icon/extension-icon.png",
   "description": "Suporte ao BFC Script com integração Groovy, sintax Highlight. Inclui alinhamento vertical automático para chamadas de métodos encadeadas e organização de blocos. Suporte a 'Format on Save'",
   "repository": {
