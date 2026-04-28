@@ -6,10 +6,19 @@
 	],
 	"patterns": [
 		{
+			"include": "#keywords"
+		},
+		{
 			"include": "#comments"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#collections"
+		},
+		{
+			"include": "#blocks"
 		},
 		{
 			"include": "#namespaces"
@@ -24,22 +33,60 @@
 			"include": "#function-calls"
 		},
 		{
-			"include": "#keywords"
-		},
-		{
 			"include": "#operators"
 		},
 		{
 			"include": "#numbers"
 		},
 		{
-			"include": "#collections"
-		},
-		{
 			"include": "#variables"
 		}
 	],
 	"repository": {
+		"blocks": {
+			"patterns": [
+				{
+					"name": "meta.block.bfc",
+					"begin": "\\{",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.begin.bfc"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.end.bfc"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
+				},
+				{
+					"name": "meta.group.bfc",
+					"begin": "\\(",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.group.begin.bfc"
+						}
+					},
+					"end": "\\)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.group.end.bfc"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
+				}
+			]
+		},
 		"collections": {
 			"patterns": [
 				{
@@ -162,12 +209,12 @@
 							"match": "\\b(Dados|Arquivo|Resultado|Datas)\\b"
 						},
 						{
-							"name": "variable.other.property.bfc",
-							"match": "\\.[a-zA-Z_][a-zA-Z0-9_]*"
-						},
-						{
 							"name": "entity.name.function.bfc",
 							"match": "\\.[a-zA-Z_][a-zA-Z0-9_]*(?=\\()"
+						},
+						{
+							"name": "variable.other.property.bfc",
+							"match": "\\.[a-zA-Z_][a-zA-Z0-9_]*"
 						}
 					]
 				}
@@ -210,7 +257,7 @@
 				},
 				{
 					"name": "constant.language.bfc",
-					"match": "\\b(true|false|null)\\b"
+					"match": "\\b(true|false|null|nulo)\\b"
 				},
 				{
 					"name": "constant.other.type.bfc",
@@ -238,7 +285,7 @@
 				},
 				{
 					"name": "keyword.operator.other.bfc",
-					"match": "\\?|:|\\."
+					"match": "\\?|:"
 				}
 			]
 		},

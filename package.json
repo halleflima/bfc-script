@@ -1,12 +1,21 @@
 {
-  "name": "bfc",
-  "displayName": "BFC",
-  "icon": "icon/icon.png",
-  "description": "",
+  "name": "bfc-script",
+  "publisher": "Hallef Lima",
+  "displayName": "bfc-Script syntax highlight",
+  "icon": "icon/extension-icon.png",
+  "description": "Suporte ao BFC Script com integração Groovy, sintax Highlight. Inclui alinhamento vertical automático para chamadas de métodos encadeadas e organização de blocos. Suporte a 'Format on Save'",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/halleflima/bfc-script.git"
+  },
   "version": "0.0.1",
+  "main": "./src/extension.js",
   "engines": {
     "vscode": "^1.116.0"
   },
+  "activationEvents": [
+    "onLanguage:bfc"
+  ],
   "categories": [
     "Programming Languages"
   ],
@@ -27,7 +36,8 @@
         ],
         "extensions": [
           ".bfc"
-        ]
+        ],
+        "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
@@ -36,6 +46,12 @@
         "scopeName": "source.bfc",
         "path": "./syntaxes/bfc-script.tmLanguage.json"
       }
-    ]
+    ],
+    "configurationDefaults": {
+      "[bfc]": {
+        "editor.defaultFormatter": "hallef.bfc",
+        "editor.formatOnSave": true
+      }
+    }
   }
 }
