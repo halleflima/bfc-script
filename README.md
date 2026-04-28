@@ -29,4 +29,4 @@ Este projeto adiciona suporte especializado à linguagem **BFC Script** (com int
 - `icon/`: Recursos visuais da extensão.
 
 ---
-Desenvolvido por [Hallef Lima](https://github.com/hallef)
+Desenvolvido por [Hallef Lima](https://github.com/halleflima)
