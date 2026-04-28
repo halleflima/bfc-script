@@ -1,51 +1,32 @@
-# <img src="https://yt3.googleusercontent.com/sUvIjXxRBrpOMVQ3jKrCjgcewUpEH14X36NcueMxpD0cZOsx-OCA0_RZ9_HBM0JFj9p7sQTmB1s=s1024-c-k-c0x00ffffff-no-rj" width="40" height="40" valign="middle"> BFC Script for VS Code
+# BFC Script Support for VS Code
 
-[![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=bfc.bfc)
-
-Suporte profissional para a linguagem **BFC Script**, oferecendo syntax highlighting avançado e integração visual completa para o Visual Studio Code.
+Este projeto adiciona suporte especializado à linguagem **BFC Script** (com integração Groovy) no Visual Studio Code. Desenvolvido para oferecer uma experiência de desenvolvimento fluida, com foco em legibilidade e produtividade.
 
 ## 🚀 Funcionalidades
 
-- ✨ **Syntax Highlighting Profissional**: Cores otimizadas para temas claros e escuros.
-- 📦 **Suporte a Coleções**: Destaque inteligente para listas e arrays `[item1, item2]`.
-- 🔍 **APIs Nativas**: Reconhecimento especial para classes `Dados`, `Arquivo`, `Resultado` e `Datas`.
-- 📂 **Ícone Personalizado**: Identificação visual rápida de arquivos `.bfc` no explorador.
-- 💬 **Comentários Inteligentes**: Suporte total a comentários de linha `//` e blocos `/* */`.
-- 🧬 **Groovy-like**: Suporte a closures (`each`), interpolação de strings `${}` e encadeamento de métodos.
+- **Syntax Highlighting:** Realce de sintaxe completo e preciso para BFC Script e elementos Groovy.
+- **Smart Formatting:** Formatador de código inteligente que respeita as configurações do seu editor.
+- **Vertical Alignment (Method Chaining):** Alinhamento automático e preciso de chamadas de métodos encadeadas (o ponto `.` fica perfeitamente alinhado verticalmente).
+- **Format on Save:** Configurado para organizar seu código automaticamente sempre que você salvar.
+- **Iconografia Personalizada:** Identidade visual exclusiva para arquivos `.bfc` no explorador do VS Code.
 
-## 💻 Exemplo de Código
+## 🛠️ Como usar
 
-```bfc
-// Definição de filtros em lista
-filtros = [
-    filDataIni,
-    filDataFim,
-    filSituacao
-]
+1. Instale a extensão através do VS Code Marketplace.
+2. Abra qualquer arquivo com a extensão `.bfc`.
+3. Para formatar manualmente, use o atalho `Shift + Alt + F`.
+4. O **Format on Save** já vem habilitado por padrão para esta linguagem.
 
-/* 
-   Processamento de dados tributários
-*/
-Dados.tributos.v2.dividas.busca(filtros).each() { item ->
-    imprimir("Valor da dívida: ${item.valor}")
-}
-```
+## 🔗 Links
 
-## 🛠️ Instalação
+- **Repositório:** [GitHub - bfc-script](https://github.com/hallef/bfc-script)
+- **Reportar Bugs:** [Issues](https://github.com/hallef/bfc-script/issues)
 
-1. Abra o **Visual Studio Code**
-2. Vá em **Extensions** (`Ctrl+Shift+X`)
-3. Procure por **BFC**
-4. Clique em **Install**
-5. (Opcional) Ative o tema de ícones: `Ctrl+Shift+P` -> `File Icon Theme` -> `BFC Icons`.
+## 📂 Estrutura do Projeto
 
-## 📖 APIs Suportadas
-
-A extensão é otimizada para o ecossistema BFC, incluindo:
-- `Dados.tributos.v2...`
-- `Arquivo.novo(...)`
-- `Resultado.arquivo(...)`
-- `Datas.hoje()`
+- `syntaxes/`: Definições da gramática para realce de sintaxe.
+- `src/extension.js`: Lógica do provedor de formatação (Engine de alinhamento vertical).
+- `icon/`: Recursos visuais da extensão.
 
 ---
-Desenvolvido para máxima produtividade em **BFC Script**.
+Desenvolvido por [Hallef Lima](https://github.com/hallef)
